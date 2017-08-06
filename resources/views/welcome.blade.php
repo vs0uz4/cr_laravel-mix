@@ -1,61 +1,95 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+    <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <nav>
-                    <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Contact</li>
-                    </ul>
-                </nav>
-            </div>
+    <!-- Styles -->
+    <style>
+        html, body {
+            background-color: #fff;
+            color: #636b6f;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            height: 100vh;
+            margin: 0;
+        }
 
-            <div class="row">
-                <h1>Font-Awesome</h1>
-                <i class="fa fa-address-book" aria-hidden="true"></i>
-            </div>
+        .full-height {
+            height: 100vh;
+        }
 
-            <div class="row">
-                <h1>Bootstrap CSS</h1>
-                <span class="glyphicon glyphicon-trash"></span>
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
 
-                <div class="alert alert-warning" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">x</span>
-                    </button>
-                    <strong>Holy guacamole!</strong> Best check yo self, you're not loocking too good.
-                </div>
-            </div>
+        .position-ref {
+            position: relative;
+        }
 
-            <div class="row">
-                <footer>
-                    Rodapé
-                </footer>
-            </div>
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 84px;
+        }
+
+        .links > a {
+            color: #636b6f;
+            padding: 0 25px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .m-b-md {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="flex-center position-ref full-height">
+    @if (Route::has('login'))
+        <div class="top-right links">
+            @auth
+            <a href="{{ url('/home') }}">Home</a>
+            @else
+                <a href="{{ route('login') }}">Login</a>
+                <a href="{{ route('register') }}">Register</a>
+                @endauth
+        </div>
+    @endif
+
+    <div class="content">
+        <div class="title m-b-md">
+            Laravel
         </div>
 
-        <script type="text/javascript" src="{{ asset('/js/scripts.js') }}"></script>
-        <!-- Comentado - Transportado para app.js
-        <script type="text/javascript">
-            $(document).ready(function (){
-                alert('Olá Mundo');
-            });
-        </script>
-        -->
-    </body>
+        <div class="links">
+            <a href="https://laravel.com/docs">Documentation</a>
+            <a href="https://laracasts.com">Laracasts</a>
+            <a href="https://laravel-news.com">News</a>
+            <a href="https://forge.laravel.com">Forge</a>
+            <a href="https://github.com/laravel/laravel">GitHub</a>
+        </div>
+    </div>
+</div>
+</body>
 </html>

@@ -1,4 +1,8 @@
 {
     "/css/style.css": "/css/style.css",
-    "/js/scripts.js": "/js/scripts.js"
+    "/css/admin.css": "/css/admin.css",
+    "/css/blog.css": "/css/blog.css",
+    "/js/scripts.js": "/js/scripts.js",
+    "/js/admin.js": "/js/admin.js",
+    "/js/blog.js": "/js/blog.js"
 }
