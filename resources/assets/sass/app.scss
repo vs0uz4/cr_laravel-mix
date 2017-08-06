@@ -1,0 +1,16 @@
+@import "~font-awesome/css/font-awesome.min.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+// Variables
+@import "variables";
+
+body{
+    font-size: $body_font-size;
+}
+
+// Panel Customizations
+@import "panel";
+
+// View's Customizations
+@import "admin";
+@import "blog";
