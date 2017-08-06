@@ -11,13 +11,16 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/font-awesome.min.css') }}">
     </head>
     <body>
-        <div class="container">
-            <h1>Bootstrap SASS - CSS</h1>
-        </div>
+        <i class="fa fa-address-book" aria-hidden="true"></i>
 
-        <script type="text/javascript" src="{{ asset('/js/app.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/js/jquery.min.js') }}"></script>
+        <script type="text/javascript">
+            $(document).ready(function (){
+                alert('Olá Mundo');
+            });
+        </script>
     </body>
 </html>
