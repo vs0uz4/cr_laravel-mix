@@ -11,8 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    @stack('styles')
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -76,7 +75,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/scripts.js') }}"></script>
+    <script src="{{ asset('js/vendor.js') }}"></script>
     @stack('scripts')
 </body>
 </html>

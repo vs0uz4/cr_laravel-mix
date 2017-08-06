@@ -11,24 +11,13 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.copy('node_modules/font-awesome/fonts', 'public/fonts')
-   .copy('node_modules/bootstrap/dist/fonts', 'public/fonts');
-
-mix.styles([
-    'node_modules/font-awesome/css/font-awesome.min.css',
-    'node_modules/bootstrap/dist/css/bootstrap.min.css',
-    'resources/assets/css/app.css',
-    'resources/assets/css/panel.css'
-],  'public/css/style.css')
-
-mix.copy('resources/assets/css/admin.css', 'public/css/admin.css');
-mix.copy('resources/assets/css/blog.css', 'public/css/blog.css');
+mix.less('resources/assets/less/app.less', 'public/css');
 
 mix.scripts([
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
     'resources/assets/js/app.js'
-],  'public/js/scripts.js')
+],  'public/js/vendor.js')
 
 mix.copy('resources/assets/js/admin.js', 'public/js/admin.js');
 mix.copy('resources/assets/js/blog.js' , 'public/js/blog.js');
