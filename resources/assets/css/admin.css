@@ -1,3 +1,7 @@
 .admin-features {
     font-style: italic;
 }
+
+dd, dt{
+    padding-bottom: 8px;
+}
