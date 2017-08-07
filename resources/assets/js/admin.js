@@ -1,5 +1,5 @@
 require('./bootstrap');
 
 $(document).ready(function (){
-    console.log('Scripts for Admin View!');
+    console.log('This is the view Admin!');
 });

@@ -1,5 +1,5 @@
-let mix = require('laravel-mix');
-let webpack = require('webpack');
+let mix = require('laravel-mix')
+let webpack = require('webpack')
 
 /*
  |--------------------------------------------------------------------------
@@ -25,11 +25,16 @@ mix.webpackConfig({
             jQuery: "jquery"
         })
     ]
-});
+})
 
-mix.sass('resources/assets/sass/app.scss', 'public/css');
+mix.sass('resources/assets/sass/app.scss', 'public/css')
 
 mix.js('resources/assets/js/admin.js', 'public/js')
     .js('resources/assets/js/blog.js', 'public/js')
     .sourceMaps()
-    .extract(['jquery', 'bootstrap']);
+    .extract(['jquery', 'bootstrap'])
+
+mix.browserSync({
+    proxy: 'app:8080',
+    open: false
+})

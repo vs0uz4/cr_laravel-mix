@@ -5,10 +5,11 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Admin Page</div>
+                    <div class="panel-heading">Admin View</div>
 
                     <div class="panel-body">
-                        <p>You are in admin page!</p>
+                        <p>You are in admin view!</p>
+
                         <p class="admin-features">
                             Here, you will administer:
                             <dl class="dl-horizontal">
@@ -30,5 +31,5 @@
 @endsection
 
 @push('scripts')
-    <script type="text/javascript" src="{{ asset('/js/admin.js') }}"></script>
+    <script src="{{ asset('/js/admin.js') }}"></script>
 @endpush

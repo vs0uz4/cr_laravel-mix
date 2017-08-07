@@ -8,7 +8,7 @@
                     <div class="panel-heading">Blog Page</div>
 
                     <div class="panel-body">
-                        You are in blog page.
+                        You are in blog view.
 
                         <p>
                             <blockquote>
@@ -24,5 +24,5 @@
 @endsection
 
 @push('scripts')
-    <script type="text/javascript" src="{{ asset('/js/blog.js') }}"></script>
+    <script src="{{ asset('/js/blog.js') }}"></script>
 @endpush
